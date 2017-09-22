@@ -48,7 +48,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
     steps: '='
     onFinishCallback: '&onFinishCallback'
     index: '=stepIndex'
-  replace: true
+  replace: false
   link: (scope, element, attrs) ->
     # Important Variables
     curStep = null

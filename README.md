@@ -13,6 +13,7 @@ This library requires Angular.js 1.2 or greater along with any recent version of
 You can find a very simple example of ngOnboarding [here](http://adamalbrecht.github.io/ngOnboarding/).
 
 ## The Basics
+
 To use the library, add the JS and CSS file, then include the module in your app
 
 ```javascript

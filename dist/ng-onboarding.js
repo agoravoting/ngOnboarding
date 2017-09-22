@@ -54,7 +54,7 @@
           onFinishCallback: '&onFinishCallback',
           index: '=stepIndex'
         },
-        replace: true,
+        replace: false,
         link: function(scope, element, attrs) {
           var attributesToClear, curStep, setupOverlay, setupPositioning;
           curStep = null;
