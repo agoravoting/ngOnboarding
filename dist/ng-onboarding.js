@@ -58,12 +58,18 @@
         link: function(scope, element, attrs) {
           var attributesToClear, curStep, setupOverlay, setupPositioning;
           curStep = null;
-          attributesToClear = ['title', 'top', 'right', 'bottom', 'left', 'width', 'height', 'position'];
+          attributesToClear = ['title', 'top', 'right', 'bottom', 'left', 'width', 'height', 'position', 'onNext', 'onPrev'];
           scope.stepCount = scope.steps.length;
           scope.next = function() {
+            if (scope.steps[scope.index].nextFunction) {
+              scope.steps[scope.index].nextFunction(scope.index);
+            }
             return scope.index = scope.index + 1;
           };
           scope.previous = function() {
+            if (scope.steps[scope.index].prevFunction) {
+              scope.steps[scope.index].prevFunction(scope.index);
+            }
             return scope.index = scope.index - 1;
           };
           scope.close = function() {
